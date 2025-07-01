@@ -6,7 +6,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const emailRoutes = require('./email.routes');
 
-app.use(cors());
+app.use(cors({
+  origin: '*', // Allow all origins for simplicity, adjust as needed
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => {
