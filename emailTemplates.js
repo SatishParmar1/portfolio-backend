@@ -68,7 +68,7 @@ function ownerTemplate({ subject, body, visitorEmail, name, phone, email }) {
         <span style="display:inline-block;padding:12px 28px;background:linear-gradient(90deg,#fff,#bbb);color:#18181b;border-radius:24px;font-weight:bold;box-shadow:0 2px 8px #bbb4;animation:glow 1.5s infinite alternate;letter-spacing:1px;">Portfolio Notification 📬</span>
       </div>
       <hr style="margin:36px 0;border:none;border-top:1px solid #eee;">
-      <footer style="font-size:0.97em;color:#888;text-align:center;">Sent via <b>Portfolio Backend</b> <span style="font-size:1.2em;">🤍</span></footer>
+      <footer style="font-size:0.97em;color:#888;text-align:center;">Sent via <b>Portfolio Backend</b></footer>
       <style>@keyframes glow { from { box-shadow:0 2px 8px #bbb4; } to { box-shadow:0 2px 24px #fff2; } }</style>
     </div>
   `;

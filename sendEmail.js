@@ -11,7 +11,7 @@ async function sendEmail({ from, to, body, name, phone, email, html }) {
     to,
     subject: 'Thank you for visiting my portfolio!',
     text: body,
-    html: html || visitorTemplate({ subject: 'Thank you for visiting my portfolio!', body, name, phone, email })
+    html: html || visitorTemplate({ subject: 'Thank you for visiting my portfolio!', body, name, phone, to })
   };
   return transporter.sendMail(mailOptions);
 }
