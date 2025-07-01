@@ -16,7 +16,7 @@ router.post('/send-email', async (req, res) => {
     await sendOwnerEmail({
       from,
       to: process.env.OWNER_EMAIL, // owner's email from .env
-      body: `A new visitor received an email.\n\nVisitor email: Message: ${body}`,
+      body: `Message:<br> ${body}`,
       visitorEmail: to,
       name,
       phone,

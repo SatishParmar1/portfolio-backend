@@ -1,5 +1,4 @@
 require('dotenv').config();
-
 // Email configuration for nodemailer
 module.exports = {
   host: process.env.SMTP_HOST,
