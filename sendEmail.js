@@ -20,7 +20,7 @@ async function sendOwnerEmail({ from, to, body, visitorEmail, name, phone, email
   const mailOptions = {
     from,
     to,
-    subject: 'Portfolio Visitor Notification',
+    subject: `Portfolio Visitor ${name} Notification`,
     text: body,
     html: ownerTemplate({ subject: 'Portfolio Visitor Notification', body, visitorEmail, name, phone, email })
   };

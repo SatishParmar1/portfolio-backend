@@ -1,4 +1,5 @@
 const { sendEmail, sendOwnerEmail } = require('./sendEmail');
+require('dotenv').config();
 
 const router = require('express').Router();
 
@@ -14,8 +15,8 @@ router.post('/send-email', async (req, res) => {
     // Send to owner (light theme)
     await sendOwnerEmail({
       from,
-      to: 'satishparmarparmar486@gmail.com', // your email
-      body: `A new visitor received an email.\n\nVisitor email: ${to}\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage: ${body}`,
+      to: process.env.OWNER_EMAIL, // owner's email from .env
+      body: `A new visitor received an email.\n\nVisitor email: Message: ${body}`,
       visitorEmail: to,
       name,
       phone,
